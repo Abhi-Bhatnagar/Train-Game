@@ -1,0 +1,96 @@
+.panel {
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 24px;
+  margin-top: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panelTitle {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.statusBar {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.found {
+  background: #1c2a1c;
+  border-color: #4caf50;
+  color: #6fcf73;
+}
+
+.none {
+  background: #2a1c1c;
+  border-color: #cf4c4c;
+  color: #cf6f6f;
+}
+
+.countBadge {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 420px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+.grid::-webkit-scrollbar { width: 4px; }
+.grid::-webkit-scrollbar-track { background: #1a1a1a; }
+.grid::-webkit-scrollbar-thumb { background: #444; border-radius: 2px; }
+
+.solution {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 14px;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.1s;
+}
+
+.solution:hover {
+  border-color: #f5c518;
+}
+
+.expr {
+  color: #f0ede4;
+}
+
+.eq {
+  color: #f5c518;
+  font-weight: 500;
+}

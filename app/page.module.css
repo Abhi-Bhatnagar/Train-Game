@@ -1,0 +1,194 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #111;
+  border-bottom: 3px solid #f5c518;
+  padding: 20px 24px 16px;
+}
+
+.logo {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 42px;
+  letter-spacing: 2px;
+  color: #f5c518;
+  line-height: 1;
+}
+
+.sub {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #777;
+  margin-top: 5px;
+  font-family: var(--font-dm-mono), monospace;
+}
+
+.tickerWrap {
+  background: #f5c518;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 2px solid #d4a800;
+}
+
+.ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 28s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 7px 32px 7px 0;
+  white-space: nowrap;
+  font-family: var(--font-dm-mono), monospace;
+}
+
+.tickerCode {
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  letter-spacing: 1px;
+  background: rgba(0,0,0,0.12);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+
+.tickerName {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.body {
+  padding: 28px 24px;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.panel {
+  background: #252525;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.panelTitle {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.digits {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.targetRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.targetLabel {
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.targetVal {
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 28px;
+  color: #f5c518;
+  letter-spacing: 2px;
+}
+
+.randomBtn {
+  width: 100%;
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  color: #777;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.randomBtn:hover {
+  border-color: #f5c518;
+  color: #f5c518;
+}
+
+.solveBtn {
+  width: 100%;
+  padding: 16px;
+  background: #f5c518;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-bebas), sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.solveBtn:hover:not(:disabled) {
+  background: #ffd430;
+}
+
+.solveBtn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.solveBtn:disabled {
+  background: #333;
+  color: #555;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .routeBar {
+    gap: 12px;
+    font-size: 10px;
+  }
+
+  .body {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 34px;
+  }
+}
